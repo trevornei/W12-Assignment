@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 12 Assignment</title>
     <link href="/dist/output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-slate-50">
     <div class="my-8 flex flex-col items-center justify-center sticky top-0 w-screen h-auto py-4" id="blogTitle">
@@ -38,22 +46,12 @@
                     In conclusion, while jQuery was undoubtedly groundbreaking in its time, offering solutions to many problems that plagued developers, it has not kept pace with the evolution of modern web development practices and needs. Libraries like React, Angular, and Svelte offer a more efficient, maintainable, and feature-rich development experience, making them a natural choice for new projects. While jQuery won't be disappearing overnight and still has its use-cases, the trend is clear: modern front-end development has largely moved on, embracing new paradigms that jQuery was not designed to handle.</p>
             </div>
         </article>
-        <div class="" id="formCont">
-            <form action="" class="flex flex-col">
-                <label for="" class="m-2" id=""></label>
-                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Full Name">
-                <label for="" class="m-2" id=""></label>
-                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Comment">
-                <!--NOTE: Don't forget to reset page refresh for submit button!-->
-                <button type="submit">
-                    <h3 class="text-md">Submit</h3>
-                </button>
-                <link href="/dist/output.css" rel="stylesheet">
-            </form>
-        </div>
-        <div class="" id="tableCont">
-            <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-800 text-gray-200" id="">
+        <div class="w-full h-full" id="tableCont">
+            <table class="rounded-t-lg m-5 w-full mx-auto bg-violet-600 text-black text-center" id="">
                 <thead class="" id="">
+                    <th class="" id="">
+                        <h4 class="" id="">ID</h4>
+                    </th>
                     <th class="" id="">
                         <h4 class="" id="">Full Name</h4>
                     </th>
@@ -63,12 +61,26 @@
                 </thead>
                 <tbody class="" id="">
                     <!--This section will populate comments.-->
-                    <tr class="bg-gray-700 border-b border-gray-600">
+                    <tr class="bg-violet-200 border-b border-gray-600">
+                        <td class="px-4 py-3">Number</td>
                         <td class="px-4 py-3">Jill</td>
-                        <td class="px-4 py-3">Smith</td>
+                        <td class="px-4 py-3">Verbal Diarhea</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="w-full h-auto mx-12 p-8 bg-violet-200" id="formCont">
+            <form action="" class="flex flex-col items-center justify-center">
+                <label for="" class="m-2" id=""></label>
+                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Full Name">
+                <label for="" class="m-2" id=""></label>
+                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Comment">
+                <!--NOTE: Don't forget to reset page refresh for submit button!-->
+                <button type="submit" class="w-20 bg-violet-600 rounded-3xl mt-4">
+                    <h3 class="text-md">Submit</h3>
+                </button>
+                <link href="/dist/output.css" rel="stylesheet">
+            </form>
         </div>
     </main>
      <!--Add: app.js and connect JQuery.-->
