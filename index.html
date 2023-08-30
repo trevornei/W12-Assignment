@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 12 Assignment</title>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center">
     <main class="" id="">
-        <article class="" id="">
+        <article class="flex flex-col" id="">
             <div class="" id="blogTitle">
-                <h1>Blog Post</h1>
+                <h1 class="text-3xl">Blog Post</h1>
             </div>
-            <div class="" id="blogBody"></div>
+            <div class="" id="">
+                <img src="img/DALL·E 2023-08-30 13.12.22 - a modern desktop computer in the style of Vaporwave.png" alt="A computer in the style of vaporware artwork." class="max-w-sm">
+            </div>
+            <div class="" id="blogBody">
+                <p class="" id="">
+                    In the realm of web development, technology is perpetually evolving, bringing forth tools and libraries that offer newer, better ways of achieving common goals. One such library that once dominated the landscape is jQuery. Launched in 2006, jQuery simplified tasks like HTML DOM manipulation and event handling. It was a revolutionary tool that addressed many limitations and inconsistencies among web browsers. However, as the years have passed, the web ecosystem has evolved considerably, and modern front-end libraries like Svelte, React, and Angular have emerged, making jQuery seem outdated in comparison.
+                    <br>
+                    <br>
+                    Firstly, one of the most glaring differences is in how these libraries and frameworks handle data-binding and user interface updates. While jQuery requires manual intervention to update the UI when the data changes, libraries like React and Angular offer a declarative approach to UI components. They allow for automatic re-rendering whenever the state changes, making it easier to keep the UI in sync with the data. Svelte takes this a step further by compiling components to highly efficient vanilla JavaScript at build time, eliminating the need for a virtual DOM altogether. This results in faster rendering and lower runtime overhead.
+                    <br>
+                    <br>
+                    Another significant factor is component-based architecture, a concept that has become almost indispensable in modern web development. React and Angular provide a robust framework for creating modular, reusable components, leading to cleaner and more maintainable codebases. jQuery, on the other hand, wasn't designed with this architectural pattern in mind, often leading to spaghetti code that becomes increasingly difficult to manage as the project grows.
+                    <br>
+                    <br>
+                    Moreover, the development ecosystems surrounding modern libraries are far more vibrant and feature-rich. Tools like the Create React App or Angular CLI offer robust project scaffolding, built-in best practices, and optimizations out-of-the-box. Features like server-side rendering, code splitting, and tree shaking are often just a configuration away. While it is possible to achieve some of these optimizations with jQuery, it typically requires manual setup and third-party tools, leading to a fractured and less streamlined developer experience.
+                    <br>
+                    <br>
+                    Then there’s the aspect of community and corporate support. While jQuery is maintained by a group of volunteers, Angular is backed by Google, and React by Facebook. This support ensures that these libraries are continually updated and improved, benefiting from the vast resources and expertise these corporations can offer. Svelte, though not backed by a large corporation, has seen a meteoric rise in community engagement and contribution, gaining rapid traction for its innovative approach to reactivity and compilation.
+                    <br>
+                    <br>
+                    In conclusion, while jQuery was undoubtedly groundbreaking in its time, offering solutions to many problems that plagued developers, it has not kept pace with the evolution of modern web development practices and needs. Libraries like React, Angular, and Svelte offer a more efficient, maintainable, and feature-rich development experience, making them a natural choice for new projects. While jQuery won't be disappearing overnight and still has its use-cases, the trend is clear: modern front-end development has largely moved on, embracing new paradigms that jQuery was not designed to handle.</p>
+            </div>
         </article>
         <div class="" id="formCont">
             <form action="" class="">
@@ -21,6 +42,7 @@
                 <input type="text" class="" id="">
                 <!--NOTE: Don't forget to reset page refresh for submit button!-->
                 <button type="submit"></button>
+                <link href="/dist/output.css" rel="stylesheet">
             </form>
         </div>
         <div class="" id="tableCont">
