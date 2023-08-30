@@ -2,7 +2,9 @@
 $(window).on('scroll', function() {
     const blogTitle = $('#blogTitle');
 
-    if ($(this).scrollTop() >= 30) {
+    const testValue = 1;
+
+    if ($(this).scrollTop() >= 60) {
         blogTitle.addClass('hidden');
     } else {
         blogTitle.removeClass('hidden');
