@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./{index.html, app.js}"],
+  content: ["./**/*.html", "./**/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      placeholderColor: {
+        'violet-600': '#7C3AED',
+      },
+    },
   },
   plugins: [],
 }

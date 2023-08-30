@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 12 Assignment</title>
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body class="flex flex-col items-center justify-center">
-    <main class="" id="">
-        <article class="flex flex-col" id="">
-            <div class="" id="blogTitle">
-                <h1 class="text-3xl">Blog Post</h1>
+<body class="bg-black text-slate-50">
+    <div class="my-8 flex flex-col items-center justify-center sticky top-0 w-screen h-auto py-4" id="blogTitle">
+        <h1 class="text-4xl">Retro Technical</h1>
+        <div>
+            <p class="text-sm">A blog about the old making the new.</p>
+        </div>
+    </div>
+    <main class="mx-40 flex flex-col justify-center items-center shadow-2xl shadow-violet-600 p-8" id="">
+        <article class="flex flex-col items-center justify-center" id="">
+            <div class="my-8 shadow-2xl hover:shadow-2xl hover:shadow-violet-800 shadow-violet-800" id="">
+                <img src="img/DALL·E 2023-08-30 13.12.22 - a modern desktop computer in the style of Vaporwave.png" alt="A computer in the style of vaporware artwork." class="w-full rounded-lg">
             </div>
-            <div class="" id="">
-                <img src="img/DALL·E 2023-08-30 13.12.22 - a modern desktop computer in the style of Vaporwave.png" alt="A computer in the style of vaporware artwork." class="max-w-sm">
-            </div>
-            <div class="" id="blogBody">
+            <div class="my-8 p-8 rounded-lg" id="blogBody">
                 <p class="" id="">
                     In the realm of web development, technology is perpetually evolving, bringing forth tools and libraries that offer newer, better ways of achieving common goals. One such library that once dominated the landscape is jQuery. Launched in 2006, jQuery simplified tasks like HTML DOM manipulation and event handling. It was a revolutionary tool that addressed many limitations and inconsistencies among web browsers. However, as the years have passed, the web ecosystem has evolved considerably, and modern front-end libraries like Svelte, React, and Angular have emerged, making jQuery seem outdated in comparison.
                     <br>
@@ -28,25 +32,27 @@
                     Moreover, the development ecosystems surrounding modern libraries are far more vibrant and feature-rich. Tools like the Create React App or Angular CLI offer robust project scaffolding, built-in best practices, and optimizations out-of-the-box. Features like server-side rendering, code splitting, and tree shaking are often just a configuration away. While it is possible to achieve some of these optimizations with jQuery, it typically requires manual setup and third-party tools, leading to a fractured and less streamlined developer experience.
                     <br>
                     <br>
-                    Then there’s the aspect of community and corporate support. While jQuery is maintained by a group of volunteers, Angular is backed by Google, and React by Facebook. This support ensures that these libraries are continually updated and improved, benefiting from the vast resources and expertise these corporations can offer. Svelte, though not backed by a large corporation, has seen a meteoric rise in community engagement and contribution, gaining rapid traction for its innovative approach to reactivity and compilation.
+                    Then theres the aspect of community and corporate support. While jQuery is maintained by a group of volunteers, Angular is backed by Google, and React by Facebook. This support ensures that these libraries are continually updated and improved, benefiting from the vast resources and expertise these corporations can offer. Svelte, though not backed by a large corporation, has seen a meteoric rise in community engagement and contribution, gaining rapid traction for its innovative approach to reactivity and compilation.
                     <br>
                     <br>
                     In conclusion, while jQuery was undoubtedly groundbreaking in its time, offering solutions to many problems that plagued developers, it has not kept pace with the evolution of modern web development practices and needs. Libraries like React, Angular, and Svelte offer a more efficient, maintainable, and feature-rich development experience, making them a natural choice for new projects. While jQuery won't be disappearing overnight and still has its use-cases, the trend is clear: modern front-end development has largely moved on, embracing new paradigms that jQuery was not designed to handle.</p>
             </div>
         </article>
         <div class="" id="formCont">
-            <form action="" class="">
-                <label for="" class="" id=""></label>
-                <input type="text" class="" id="">
-                <label for="" class="" id=""></label>
-                <input type="text" class="" id="">
+            <form action="" class="flex flex-col">
+                <label for="" class="m-2" id=""></label>
+                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Full Name">
+                <label for="" class="m-2" id=""></label>
+                <input type="text" class="m-2 text-center text-violet-600" id="" placeholder="Comment">
                 <!--NOTE: Don't forget to reset page refresh for submit button!-->
-                <button type="submit"></button>
+                <button type="submit">
+                    <h3 class="text-md">Submit</h3>
+                </button>
                 <link href="/dist/output.css" rel="stylesheet">
             </form>
         </div>
         <div class="" id="tableCont">
-            <table class="" id="">
+            <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-800 text-gray-200" id="">
                 <thead class="" id="">
                     <th class="" id="">
                         <h4 class="" id="">Full Name</h4>
@@ -57,6 +63,10 @@
                 </thead>
                 <tbody class="" id="">
                     <!--This section will populate comments.-->
+                    <tr class="bg-gray-700 border-b border-gray-600">
+                        <td class="px-4 py-3">Jill</td>
+                        <td class="px-4 py-3">Smith</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
