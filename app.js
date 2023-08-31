@@ -19,6 +19,12 @@ $(window).on('scroll', function() {
 // 3. Add event and preventDefault() method
 $('#formSubmit').on('click', function(event) {
     event.preventDefault();
+    // CRUD --> .post() = Create
+    //NOTE - Created an object that posts HTML node to urlEndpoint and webpage.
+    $.post(urlEndpoint, {
+        fullName: $('#fullName').val(), 
+        comment: $('#comment').val(), 
+    })
 })
 
 
