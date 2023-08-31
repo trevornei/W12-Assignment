@@ -2,16 +2,15 @@
 $(window).on('scroll', function() {
     const blogTitle = $('#blogTitle');
 
-    const testValue = 1;
-
-    if ($(this).scrollTop() >= 60) {
-        blogTitle.addClass('hidden');
+    if ($(this).scrollTop() >= 20) {
+        blogTitle.addClass('hidden', 'transition-opacity');
     } else {
         blogTitle.removeClass('hidden');
     }
 })
 
 // Resets submit button from refreshing the page.
+
 
 // Function connects data from JSON server to table element.
 
