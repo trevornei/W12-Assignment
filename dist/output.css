@@ -640,6 +640,10 @@ p {
   margin-top: 1rem;
 }
 
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -884,6 +888,10 @@ p {
 
 .delay-150 {
   transition-delay: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-in-out {
