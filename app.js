@@ -1,13 +1,11 @@
 // Hide blog title on scroll.
+// Selects the window object and uses .on() JQuery method to select a scroll event. With this event it creates a function. 
 $(window).on('scroll', function() {
+    // Variable that selects the div with the id of blogTitle
     const blogTitle = $('#blogTitle');
-
+    // if else statement that adds the class hidden (which applies display hidden because of Tailwind CSS). 
     if ($(this).scrollTop() >= 20) {
-        blogTitle.addClass('transition-opacity');
-        blogTitle.addClass('ease-in-out');
-        blogTitle.addClass('duration-300');
         blogTitle.addClass('hidden');
-
     } else {
         blogTitle.removeClass('hidden');
     }
@@ -25,6 +23,7 @@ $('#formSubmit').on('click', function(event) {
         fullName: $('#fullName').val(), 
         comment: $('#comment').val(), 
     })
+    $.delete('')
 })
 
 
@@ -35,6 +34,11 @@ const urlEndpoint = 'http://localhost:3000/userComments';
 $.get(urlEndpoint).then(data => console.log(data));
 // Success, logs the data stored inside local host 3k/userComments. 
 
+// 1. The get() JQuery method uses AJAX to fetch data from the variable urlEndpoint.
+// 2. then() method takes the data from local host once the data is fetched.
+// 3. map() loops through the array and refers to every element in the array as 'userComments'
+// 4. Selects table body elements and adds a table row, with the table data cells for the key/value pairs: id, fullName, comment and adds a delete button.
+// the delete button has an onclick attribute that calls a function deleteUser. This function takes a parameter of the id from the element. 
 $.get(urlEndpoint).then(data => {
     data.map(userComments => {
         $('tbody').append(
@@ -44,9 +48,8 @@ $.get(urlEndpoint).then(data => {
                 <td class="m-6">${userComments.fullName}</td>
                 <td class="m-6">${userComments.comment}</td>
                 <td class="m-6 border-slate-950 rounded-2xl bg-violet-200">
-                    <button>
-                        <p>Delete</p> 
-                    </button>
+                <button onclick="deleteUser(${userComments.id})">Delete</button>
+
                 </td> 
             </tr>
             `)
@@ -54,70 +57,13 @@ $.get(urlEndpoint).then(data => {
     })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Funtion that translates the page title from off the page to intended position when the page loads. 
-// 1. Select the document object.
-// 2. Use ready() method to create a function when:
-//      - The DOM is made and safe to manipulate.
-// $(document).ready(function() {
-//     // Initially set the title to be off-screen
-//     $('#h ideMe').addClass('hidden')
-//     $('#hideMe').removeClass('hidden'), {
-//         duration: 2000
-//     }
-// });
-// $(document).ready(function() {
-//     // Initially set the title to be off-screen
-//     $('#blogTitle').css({ 'transform': 'translateX(100%)' })
-//     // Animate the title to its default position
-//     $('#blogTitle').css({ 'transform': 'translateX(0%)' }, {
-//       duration: 2000, // Animation time in milliseconds
-//       step: function(now, fx) {
-//         $(this).css('-webkit-transform', now); // for Safari
-//         $(this).css('transform', now);
-//       }
-//     });
-// });
-
-// Function connects data from JSON server to table element.
-
-// Function takes information from form and inputs data into db.json and table body.
-// table data-cell deletes comment.
+// Function deletes a users comment and passes id as a parameter.
+function deleteUser(id) {
+    // JQuery method that does an async HTTP request. 
+    $.ajax({
+        // specifies what local host and the elements id
+        url: `${urlEndpoint}/${id}`,
+        // specifies HTTP request type.
+        type: 'DELETE'
+    })
+}
